@@ -1,0 +1,9 @@
+D:\Desarrollo\CitaMedicaPortAdapters\Repository\SampleEstructure\bin\Debug\netstandard2.0\SampleEstructure.deps.json
+D:\Desarrollo\CitaMedicaPortAdapters\Repository\SampleEstructure\bin\Debug\netstandard2.0\SampleEstructure.dll
+D:\Desarrollo\CitaMedicaPortAdapters\Repository\SampleEstructure\obj\Debug\netstandard2.0\SampleEstructure.csprojAssemblyReference.cache
+D:\Desarrollo\CitaMedicaPortAdapters\Repository\SampleEstructure\obj\Debug\netstandard2.0\SampleEstructure.AssemblyInfoInputs.cache
+D:\Desarrollo\CitaMedicaPortAdapters\Repository\SampleEstructure\obj\Debug\netstandard2.0\SampleEstructure.AssemblyInfo.cs
+D:\Desarrollo\CitaMedicaPortAdapters\Repository\SampleEstructure\obj\Debug\netstandard2.0\SampleEstructure.csproj.CoreCompileInputs.cache
+D:\Desarrollo\CitaMedicaPortAdapters\Repository\SampleEstructure\bin\Debug\netstandard2.0\SampleEstructure.pdb
+D:\Desarrollo\CitaMedicaPortAdapters\Repository\SampleEstructure\obj\Debug\netstandard2.0\SampleEstructure.dll
+D:\Desarrollo\CitaMedicaPortAdapters\Repository\SampleEstructure\obj\Debug\netstandard2.0\SampleEstructure.pdb
