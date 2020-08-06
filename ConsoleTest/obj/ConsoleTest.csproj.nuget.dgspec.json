@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Desarrollo\\CitaMedicaPortAdapters\\Repository\\ConsoleTest\\ConsoleTest.csproj": {}
+    "D:\\Desarrollo\\CLean\\DDD-CQRS-NETCORE\\ConsoleTest\\ConsoleTest.csproj": {}
   },
   "projects": {
-    "D:\\Desarrollo\\CitaMedicaPortAdapters\\Repository\\ConsoleTest\\ConsoleTest.csproj": {
+    "D:\\Desarrollo\\CLean\\DDD-CQRS-NETCORE\\ConsoleTest\\ConsoleTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Desarrollo\\CitaMedicaPortAdapters\\Repository\\ConsoleTest\\ConsoleTest.csproj",
+        "projectUniqueName": "D:\\Desarrollo\\CLean\\DDD-CQRS-NETCORE\\ConsoleTest\\ConsoleTest.csproj",
         "projectName": "ConsoleTest",
-        "projectPath": "D:\\Desarrollo\\CitaMedicaPortAdapters\\Repository\\ConsoleTest\\ConsoleTest.csproj",
+        "projectPath": "D:\\Desarrollo\\CLean\\DDD-CQRS-NETCORE\\ConsoleTest\\ConsoleTest.csproj",
         "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-        "outputPath": "D:\\Desarrollo\\CitaMedicaPortAdapters\\Repository\\ConsoleTest\\obj\\",
+        "outputPath": "D:\\Desarrollo\\CLean\\DDD-CQRS-NETCORE\\ConsoleTest\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

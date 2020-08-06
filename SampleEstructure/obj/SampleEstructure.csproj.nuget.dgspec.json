@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Desarrollo\\CitaMedicaPortAdapters\\Repository\\SampleEstructure\\SampleEstructure.csproj": {}
+    "D:\\Desarrollo\\CLean\\DDD-CQRS-NETCORE\\SampleEstructure\\SampleEstructure.csproj": {}
   },
   "projects": {
-    "D:\\Desarrollo\\CitaMedicaPortAdapters\\Repository\\SampleEstructure\\SampleEstructure.csproj": {
+    "D:\\Desarrollo\\CLean\\DDD-CQRS-NETCORE\\SampleEstructure\\SampleEstructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Desarrollo\\CitaMedicaPortAdapters\\Repository\\SampleEstructure\\SampleEstructure.csproj",
+        "projectUniqueName": "D:\\Desarrollo\\CLean\\DDD-CQRS-NETCORE\\SampleEstructure\\SampleEstructure.csproj",
         "projectName": "SampleEstructure",
-        "projectPath": "D:\\Desarrollo\\CitaMedicaPortAdapters\\Repository\\SampleEstructure\\SampleEstructure.csproj",
+        "projectPath": "D:\\Desarrollo\\CLean\\DDD-CQRS-NETCORE\\SampleEstructure\\SampleEstructure.csproj",
         "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-        "outputPath": "D:\\Desarrollo\\CitaMedicaPortAdapters\\Repository\\SampleEstructure\\obj\\",
+        "outputPath": "D:\\Desarrollo\\CLean\\DDD-CQRS-NETCORE\\SampleEstructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

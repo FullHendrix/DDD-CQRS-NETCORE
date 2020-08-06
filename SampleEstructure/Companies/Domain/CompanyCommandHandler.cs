@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SampleEstructure.Company.Domain
+namespace SampleEstructure.Companies.Domain
 {
     class CompanyCommandHandler
     {

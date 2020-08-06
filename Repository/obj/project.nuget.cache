@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QCPhWfftRSOMZG4kfX+60zoreO9GJUMszql7GtCuiSdGdv392qatDNBm5A7uUadP6dXuWIBJ+U5YhMZyFSelVw==",
+  "dgSpecHash": "YurDPnj8VGP9nn+PXuOaZFO8Xb7O78CyCbnOuyDuZy44xKEFYqPry+mZ2wfcOYhI+BmLwBiYebAyCUtFaSYQHw==",
   "success": true,
-  "projectFilePath": "D:\\Desarrollo\\CitaMedicaPortAdapters\\Repository\\Repository\\Repository.csproj",
+  "projectFilePath": "D:\\Desarrollo\\CLean\\DDD-CQRS-NETCORE\\Repository\\Repository.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",

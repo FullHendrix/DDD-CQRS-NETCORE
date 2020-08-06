@@ -1,29 +1,33 @@
-﻿using SampleEstructure.Repository;
-using SampleEstructure.Repository.Implementation.MSSQL;
+﻿using SampleEstructure.Companies.Domain;
+using SampleEstructure.Repository;
+using SampleEstructure.Shared.Domain.ValueObject;
 using SampleEstructure.Users.Domain;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 namespace SampleEstructure.Users.Aplication.Create
 {
     public class UserCreator
     {
         GeneralRepository<User> _UserRepository;
-        UserCreator(GeneralRepository<User> UserRepository)
+        GeneralRepository<Company> _CompannyRepository;
+        UserCreator(GeneralRepository<User> UserRepository, GeneralRepository<Company> CompannyRepository)
         {
             _UserRepository = UserRepository;
+            _CompannyRepository = CompannyRepository;
         }
         #region Guard
-        private void ValidateCreateUser(Guid UserGuid)
+        private void ValidateCreateUser(Guid UserGuid, Guid CompanyGuid)
         {
             if (_UserRepository.Exists(UserGuid)) throw new Exception("User exists");
+            if (!_CompannyRepository.Exists(CompanyGuid)) throw new Exception("Company don't exists");
         }
         #endregion
-        public void Create(User user)
+        public void Create(Guid UserGuid, string Names, string LastNames, Email Email, Guid ProfileGuid, Password Password, bool IsPacient, Guid ComnpanyGuid)
         {
-            ValidateCreateUser(user.UserGuid);
+            ValidateCreateUser(UserGuid, ComnpanyGuid);
+            User user = User.Create(UserGuid, Names, LastNames, Email, ProfileGuid, Password, IsPacient, ComnpanyGuid);
             _UserRepository.Create(user);
+            //Publica eventos de dominio
+            //do something
         }
     }
 }

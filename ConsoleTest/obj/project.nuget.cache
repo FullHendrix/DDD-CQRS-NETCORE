@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "k27u/NXb30JKHZvWqwIau+AlDIseAViuhEyc7qV0Y1LFXut2Bbsphlv64L4Vvzg3kHeUIZQTEs+IMfbAzi8UIw==",
+  "dgSpecHash": "81t+fVQx4zeaoXTsuFifWtdv7H7Hn0aAzD6q4XLl2l+zQO04a1nJK+vFTpeyZfd7RFJV8pwELptvntN36umguw==",
   "success": true,
-  "projectFilePath": "D:\\Desarrollo\\CitaMedicaPortAdapters\\Repository\\ConsoleTest\\ConsoleTest.csproj",
+  "projectFilePath": "D:\\Desarrollo\\CLean\\DDD-CQRS-NETCORE\\ConsoleTest\\ConsoleTest.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
