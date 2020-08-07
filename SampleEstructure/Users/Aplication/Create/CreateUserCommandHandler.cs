@@ -1,9 +1,6 @@
 ﻿using SampleEstructure.Shared.Domain.ValueObject;
 namespace SampleEstructure.Users.Aplication.Create
 {
-    /// <summary>
-    /// Intencion de crear un usuario
-    /// </summary>
     public class CreateUserCommandHandler
     {
         private readonly UserCreator _userCreator;
