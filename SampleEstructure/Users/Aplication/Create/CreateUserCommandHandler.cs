@@ -1,4 +1,5 @@
 ﻿using SampleEstructure.Shared.Domain.ValueObject;
+using System;
 namespace SampleEstructure.Users.Aplication.Create
 {
     public class CreateUserCommandHandler
@@ -11,9 +12,16 @@ namespace SampleEstructure.Users.Aplication.Create
         public void Handle(CreateUserCommand Command)
         {
             //Asignamos los valores primitivos del comando hacia los valueobjects
-            Email email = new Email(Command.Email);
-            Password password = new Password(Command.Password) ;
-            _userCreator.Create(Command.UserGuid, Command.Names ,Command.LastNames,email, Command.ProfileGuid, password ,Command.IsPacient, Command.CompanyGuid);
+            GuidValueObject UserGuid = new GuidValueObject(Guid.NewGuid().ToString());
+            StringValueObject Names = new StringValueObject(Command.Names);
+            StringValueObject LastNames = new StringValueObject(Command.LastNames);
+            Email Email = new Email(Command.Email);
+            GuidValueObject ProfileGuid = new GuidValueObject(Command.ProfileGuid);
+            Password Password = new Password(Command.Password) ;
+            bool IsPacient = Command.IsPacient;
+            GuidValueObject CompanyGuid = new GuidValueObject(Command.CompanyGuid);
+            StringValueObject UserCreator = new StringValueObject(Command.CurrentUser);
+            _userCreator.Create(UserGuid, Names ,LastNames,Email, ProfileGuid, Password ,IsPacient, CompanyGuid, UserCreator);
         }
     }
 }

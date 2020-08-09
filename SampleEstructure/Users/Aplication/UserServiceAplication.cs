@@ -1,18 +1,14 @@
-﻿using SampleEstructure.Profile.Domain;
-using SampleEstructure.Repository;
+﻿using SampleEstructure.Repository;
+using SampleEstructure.Shared.Domain.ValueObject;
 using SampleEstructure.Users.Domain;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
-using System.Xml.Schema;
-
 namespace SampleEstructure.Users.Aplication
 {
     class UserServiceAplication
     {
-        GeneralRepository<Domain.User> _Repository;
-        ProfileServiceDomain _ProfileServiceDomain;
+        GeneralRepository<User> _Repository;
+        //ProfileServiceDomain _ProfileServiceDomain;
         public UserServiceAplication(GeneralRepository<Domain.User> Repository)
         {
             _Repository = Repository;
@@ -20,7 +16,7 @@ namespace SampleEstructure.Users.Aplication
         }
       
         #region Sincrono
-        public void Create(Domain.User User)
+        public void Create(User User)
         {
             ValidateCreateUser(User.UserGuid);
             //if (User.ProfileGuid == null) User.ProfileGuid = ProfileServiceDomain.GetProfilePacient(User.CompanyGuid);
@@ -28,18 +24,22 @@ namespace SampleEstructure.Users.Aplication
             //User.ProfileGuid = _ProfileGuid;
             _Repository.Create(User);
         }
+
+        
         #endregion
         #region Asincrono
         public async Task CreateAsync(Domain.User User)
         {
-            Guid _ProfileGuid = User.ProfileGuid;
-            //Guards
-            if (_Repository.Exists(User.UserGuid)) throw new Exception("User exists");
-            if (_ProfileGuid.Equals(null)) _ProfileGuid = ProfileServiceDomain.GetProfilePacient(User.CompanyGuid);
+            ValidateCreateUser(User.UserGuid);
+            //if (_ProfileGuid.Equals(null)) _ProfileGuid = ProfileServiceDomain.GetProfilePacient(User.CompanyGuid);
             //Procesos
-            User.ProfileGuid = _ProfileGuid;
+            //User.ProfileGuid = _ProfileGuid;
             await _Repository.CreateAsync(User);
         }
         #endregion
+        private void ValidateCreateUser(GuidValueObject userGuid)
+        {
+            if (_Repository.Exists(userGuid)) throw new Exception("User doesn't exists");
+        }
     }
 }

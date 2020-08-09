@@ -13,3 +13,6 @@ D:\Desarrollo\CLean\DDD-CQRS-NETCORE\SampleEstructure\obj\Debug\netstandard2.0\S
 D:\Desarrollo\CLean\DDD-CQRS-NETCORE\SampleEstructure\obj\Debug\netstandard2.0\SampleEstructure.csproj.CoreCompileInputs.cache
 D:\Desarrollo\CLean\DDD-CQRS-NETCORE\SampleEstructure\obj\Debug\netstandard2.0\SampleEstructure.dll
 D:\Desarrollo\CLean\DDD-CQRS-NETCORE\SampleEstructure\obj\Debug\netstandard2.0\SampleEstructure.pdb
+D:\Desarrollo\CLean\DDD-CQRS-NETCORE\SampleEstructure\bin\Debug\netstandard2.0\SampleEstructure.deps.json
+D:\Desarrollo\CLean\DDD-CQRS-NETCORE\SampleEstructure\bin\Debug\netstandard2.0\SampleEstructure.dll
+D:\Desarrollo\CLean\DDD-CQRS-NETCORE\SampleEstructure\bin\Debug\netstandard2.0\SampleEstructure.pdb

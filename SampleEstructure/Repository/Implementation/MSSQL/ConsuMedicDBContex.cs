@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using SampleEstructure.OptionMenuProfile.Domain;
-using SampleEstructure.Profile.Domain;
+using SampleEstructure.OptionMenuProfiles.Domain;
+using SampleEstructure.Profiles.Domain;
 using SampleEstructure.Users.Domain;
 using SampleEstructure.Companies.Domain;
 namespace SampleEstructure.Repository.Implementation.MSSQL
@@ -9,8 +9,8 @@ namespace SampleEstructure.Repository.Implementation.MSSQL
     {
         public ConsuMedicDBContex(DbContextOptions<ConsuMedicDBContex> options ):base(options){}
         public DbSet<User> User { get; set; }
-        public DbSet<ProfileModelDomain> Profile { get; set; }
-        public DbSet<OptionMenuProfileModelDomain> OptionMenuProfileModelDomain { get; set; }
+        public DbSet<Profile> Profile { get; set; }
+        public DbSet<OptionMenuProfile> OptionMenuProfileModelDomain { get; set; }
         public DbSet<Company> Company { get; set; }
     }
 }

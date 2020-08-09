@@ -7,27 +7,27 @@ namespace SampleEstructure.Users.Aplication.Create
 {
     public class UserCreator
     {
-        GeneralRepository<User> _UserRepository;
-        GeneralRepository<Company> _CompannyRepository;
-        UserCreator(GeneralRepository<User> UserRepository, GeneralRepository<Company> CompannyRepository)
+        private GeneralRepository<User> _UserRepository;
+        private GeneralRepository<Company> _CompannyRepository;
+        public UserCreator(GeneralRepository<User> UserRepository, GeneralRepository<Company> CompannyRepository)
         {
             _UserRepository = UserRepository;
             _CompannyRepository = CompannyRepository;
         }
         #region Guard
-        private void ValidateCreateUser(Guid UserGuid, Guid CompanyGuid)
+        private void ValidateCreateUser(GuidValueObject UserGuid, GuidValueObject CompanyGuid)
         {
             if (_UserRepository.Exists(UserGuid)) throw new Exception("User exists");
             if (!_CompannyRepository.Exists(CompanyGuid)) throw new Exception("Company don't exists");
         }
         #endregion
-        public void Create(Guid UserGuid, string Names, string LastNames, Email Email, Guid ProfileGuid, Password Password, bool IsPacient, Guid ComnpanyGuid)
+        public void Create(GuidValueObject UserGuid, StringValueObject Names, StringValueObject LastNames, Email Email, GuidValueObject ProfileGuid, Password Password, bool IsPacient, GuidValueObject ComnpanyGuid, StringValueObject UserCreator)
         {
             ValidateCreateUser(UserGuid, ComnpanyGuid);
-            User user = User.Create(UserGuid, Names, LastNames, Email, ProfileGuid, Password, IsPacient, ComnpanyGuid);
+            User user = User.Create(UserGuid, Names, LastNames, Email, ProfileGuid, Password, IsPacient, ComnpanyGuid, UserCreator);
             _UserRepository.Create(user);
             //Publica eventos de dominio
             //do something
         }
     }
-}
+}     

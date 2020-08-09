@@ -1,8 +1,6 @@
 ﻿using SampleEstructure.Companies.Domain;
 using SampleEstructure.Repository;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using SampleEstructure.Shared.Domain.ValueObject;
 namespace SampleEstructure.Companies.Aplication.Find
 {
     class CompanyFinder
@@ -12,7 +10,7 @@ namespace SampleEstructure.Companies.Aplication.Find
         {
             _Repository = Repository;
         }
-        public Company Find(Guid CompanyGuid )
+        public Company Find(GuidValueObject CompanyGuid )
         {
             return _Repository.Read(CompanyGuid);
         }

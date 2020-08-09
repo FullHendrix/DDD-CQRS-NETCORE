@@ -1,52 +1,52 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Internal;
-using SampleEstructure.OptionMenuProfile.Domain;
-using System;
+using SampleEstructure.OptionMenuProfiles.Domain;
+using SampleEstructure.Shared.Domain.ValueObject;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 namespace SampleEstructure.Repository.Implementation.MSSQL
 {
-    class OptionMenuProfileRepositoryMSSQL : GeneralRepository<OptionMenuProfileModelDomain>
+    class OptionMenuProfileRepositoryMSSQL : GeneralRepository<OptionMenuProfile>
     {
         ConsuMedicDBContex _ConsuMedicDBContex;
         public OptionMenuProfileRepositoryMSSQL(ConsuMedicDBContex ConsuMedicDBContex)
         {
             _ConsuMedicDBContex = ConsuMedicDBContex;
         }
-        public void Create(OptionMenuProfileModelDomain DomainEntity)
+        public void Create(OptionMenuProfile DomainEntity)
         {
             _ConsuMedicDBContex.OptionMenuProfileModelDomain.Add(DomainEntity);
             _ConsuMedicDBContex.SaveChanges();
         }
-        public async Task CreateAsync(OptionMenuProfileModelDomain DomainEntity)
+        public async Task CreateAsync(OptionMenuProfile DomainEntity)
         {
             _ConsuMedicDBContex.OptionMenuProfileModelDomain.Add(DomainEntity);
             await _ConsuMedicDBContex.SaveChangesAsync();
         }
-        public bool Exists(Guid DomainEntityGuid)
+        public bool Exists(GuidValueObject DomainEntityGuid)
         {
-            return _ConsuMedicDBContex.OptionMenuProfileModelDomain.Any(x => x.OptionMenuProfileGuid == DomainEntityGuid ) ;
+            return _ConsuMedicDBContex.OptionMenuProfileModelDomain.Any(x => x.OptionMenuProfileGuid.Equals( DomainEntityGuid)) ;
         }
-        public Task<bool> ExistsAsync(Guid DomainEntityGuid)
+        public Task<bool> ExistsAsync(GuidValueObject DomainEntityGuid)
         {
-            return _ConsuMedicDBContex.OptionMenuProfileModelDomain.AnyAsync(x => x.OptionMenuProfileGuid == DomainEntityGuid);
+            return _ConsuMedicDBContex.OptionMenuProfileModelDomain.AnyAsync(x => x.OptionMenuProfileGuid.Equals(DomainEntityGuid));
         }
-        public OptionMenuProfileModelDomain Read(Guid DomainEntityGuid)
+        public OptionMenuProfile Read(GuidValueObject DomainEntityGuid)
         {
-            return _ConsuMedicDBContex.OptionMenuProfileModelDomain.SingleOrDefault( x => x.OptionMenuProfileGuid == DomainEntityGuid );
+            return _ConsuMedicDBContex.OptionMenuProfileModelDomain.SingleOrDefault(x => x.OptionMenuProfileGuid.Equals(DomainEntityGuid));
         }
-        public async Task<OptionMenuProfileModelDomain> ReadAsync(Guid DomainEntityGuid)
+        public async Task<OptionMenuProfile> ReadAsync(GuidValueObject DomainEntityGuid)
         {
-            return await _ConsuMedicDBContex.OptionMenuProfileModelDomain.SingleOrDefaultAsync(x => x.OptionMenuProfileGuid == DomainEntityGuid);
+            return await _ConsuMedicDBContex.OptionMenuProfileModelDomain.SingleOrDefaultAsync(x => x.OptionMenuProfileGuid.Equals(DomainEntityGuid));
         }
-        public  List<OptionMenuProfileModelDomain> ReadAll(Guid CompanyGuid)
+        public  List<OptionMenuProfile> ReadAll(GuidValueObject CompanyGuid)
         {
-            return  _ConsuMedicDBContex.OptionMenuProfileModelDomain.Where(x => x.CompanyGuid == CompanyGuid).ToList();
+            return  _ConsuMedicDBContex.OptionMenuProfileModelDomain.Where(x => x.CompanyGuid.Equals(CompanyGuid)).ToList();
         }
-        public async Task<List<OptionMenuProfileModelDomain>> ReadAllAsync(Guid CompanyGuid)
+        public async Task<List<OptionMenuProfile>> ReadAllAsync(GuidValueObject CompanyGuid)
         {
-            return await _ConsuMedicDBContex.OptionMenuProfileModelDomain.Where(x => x.CompanyGuid == CompanyGuid).ToListAsync();
+            return await _ConsuMedicDBContex.OptionMenuProfileModelDomain.Where(x => x.CompanyGuid.Equals(CompanyGuid)).ToListAsync();
         }
     }
 }
