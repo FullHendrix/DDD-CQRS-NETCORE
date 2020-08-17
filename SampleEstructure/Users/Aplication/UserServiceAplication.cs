@@ -9,7 +9,7 @@ namespace SampleEstructure.Users.Aplication
     {
         GeneralRepository<User> _Repository;
         //ProfileServiceDomain _ProfileServiceDomain;
-        public UserServiceAplication(GeneralRepository<Domain.User> Repository)
+        public UserServiceAplication(GeneralRepository<User> Repository)
         {
             _Repository = Repository;
             //_ProfileServiceDomain = new ProfileServiceDomain();

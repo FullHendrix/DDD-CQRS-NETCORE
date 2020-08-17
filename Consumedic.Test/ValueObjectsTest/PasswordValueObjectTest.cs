@@ -1,24 +1,33 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SampleEstructure.Shared.Domain.ValueObject;
 using System;
-using System.Collections.Generic;
-using System.Text;
-
 namespace Consumedic.Test.ValueObjectsTest
 {
     [TestClass]
-    class PasswordValueObjectTest
+    public class PasswordValueObjectTest
     {
         [TestMethod]
         public void PasswordCorrectFormat()
         {
-            Password password = new Password("2875849ca");
-                 
+            string value = "Indrta.2020";
+            Password password = new Password(value);
+            Assert.IsTrue(password.Value.Equals(value));
         }
         [TestMethod]
+        [ExpectedException(typeof(FormatException))]
         public void PasswordIncorrectFormat()
         {
-            Password password = new Password("123456");
+            string value = "123456";
+            Password password = new Password(value);
+            Assert.IsTrue(password.Value.Equals(value));
+        }
+        [TestMethod]
+        [ExpectedException(typeof(FormatException))]
+        public void PasswordIncorrectNullFormat()
+        {
+            string value = null;
+            Password password = new Password(value);
+            Assert.IsTrue(password.Value.Equals(value));
         }
     }
 }

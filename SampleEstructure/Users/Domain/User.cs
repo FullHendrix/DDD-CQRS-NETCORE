@@ -13,7 +13,7 @@ namespace SampleEstructure.Users.Domain
         public Password Password { get; private set; }
         public bool IsPacient { get; private set; }
         public GuidValueObject CompanyGuid { get; private set; }
-        private User(GuidValueObject UserGuid, StringValueObject Names, StringValueObject LastNames, Email Email, GuidValueObject ProfileGuid, Password Password, bool IsPacient, GuidValueObject CompanyGuid, StringValueObject CreationUser) {
+        private User(GuidValueObject UserGuid, StringValueObject Names, StringValueObject LastNames, Email Email, GuidValueObject ProfileGuid, Password Password, bool IsPacient, GuidValueObject CompanyGuid, Email CreationUser) {
             this.UserGuid = UserGuid;
             this.Names = Names;
             this.LastNames = LastNames;
@@ -22,12 +22,12 @@ namespace SampleEstructure.Users.Domain
             this.Password = Password;
             this.IsPacient = IsPacient;
             this.CompanyGuid = CompanyGuid;
-            this.CreacionDate = DateTime.Now;
-            this.CreacionUser = CreationUser;
+            this.CreationDate = DateTime.Now;
+            this.CreationUser = CreationUser;
         }
-        public static User Create(GuidValueObject UserGuid, StringValueObject Names, StringValueObject LastNames, Email Email, GuidValueObject ProfileGuid, Password Password, bool IsPacient, GuidValueObject ComanpanyGuid, StringValueObject CreationUser)
+        public static User Create(GuidValueObject UserGuid, StringValueObject Names, StringValueObject LastNames, Email Email, GuidValueObject ProfileGuid, Password Password, bool IsPacient, GuidValueObject CompanyGuid, Email CreationUser)
         {
-            User user = new User(UserGuid,Names,LastNames,Email,ProfileGuid,Password,IsPacient,ComanpanyGuid,CreationUser);
+            User user = new User(UserGuid,Names,LastNames,Email,ProfileGuid,Password,IsPacient,CompanyGuid,CreationUser);
             //Agrega eventos de dominio
             //do somethin
             return user;

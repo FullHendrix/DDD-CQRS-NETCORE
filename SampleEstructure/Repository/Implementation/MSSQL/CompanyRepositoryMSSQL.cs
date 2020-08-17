@@ -15,39 +15,79 @@ namespace SampleEstructure.Repository.Implementation.MSSQL
         {
             _ConsuMedicDBContex = ConsuMedicDBContex;
         }
+
         public void Create(Company DomainEntity)
         {
-            _ConsuMedicDBContex.Company.Add(DomainEntity);
-            _ConsuMedicDBContex.SaveChanges();
+            throw new NotImplementedException();
         }
-        public async Task CreateAsync(Company DomainEntity)
+
+        public Task CreateAsync(Company DomainEntity)
         {
-            _ConsuMedicDBContex.Company.Add(DomainEntity);
-            await _ConsuMedicDBContex.SaveChangesAsync();
+            throw new NotImplementedException();
         }
+
         public bool Exists(GuidValueObject DomainEntityGuid)
         {
-            return _ConsuMedicDBContex.Company.Any(x => x.CompanyGuid.Equals(DomainEntityGuid));
+            throw new NotImplementedException();
         }
-        public async Task<bool> ExistsAsync(GuidValueObject DomainEntityGuid)
+
+        public Task<bool> ExistsAsync(GuidValueObject DomainEntityGuid)
         {
-            return await _ConsuMedicDBContex.Company.AnyAsync(x => x.CompanyGuid.Equals(DomainEntityGuid));
+            throw new NotImplementedException();
         }
+
         public Company Read(GuidValueObject DomainEntityGuid)
         {
-            return _ConsuMedicDBContex.Company.SingleOrDefault(x => x.CompanyGuid.Equals(DomainEntityGuid));
+            throw new NotImplementedException();
         }
+
         public List<Company> ReadAll(GuidValueObject CompanyGuid)
         {
-            return _ConsuMedicDBContex.Company.ToList();
+            throw new NotImplementedException();
         }
-        public async Task<List<Company>> ReadAllAsync(GuidValueObject CompanyGuid)
+
+        public Task<List<Company>> ReadAllAsync(GuidValueObject CompanyGuid)
         {
-            return await _ConsuMedicDBContex.Company.ToListAsync();
+            throw new NotImplementedException();
         }
-        public async Task<Company> ReadAsync(GuidValueObject DomainEntityGuid)
+
+        public Task<Company> ReadAsync(GuidValueObject DomainEntityGuid)
         {
-            return await _ConsuMedicDBContex.Company.SingleOrDefaultAsync(x => x.CompanyGuid.Equals(DomainEntityGuid));
+            throw new NotImplementedException();
         }
+        //public void Create(Company DomainEntity)
+        //{
+        //    _ConsuMedicDBContex.Company.Add(DomainEntity);
+        //    _ConsuMedicDBContex.SaveChanges();
+        //}
+        //public async Task CreateAsync(Company DomainEntity)
+        //{
+        //    _ConsuMedicDBContex.Company.Add(DomainEntity);
+        //    await _ConsuMedicDBContex.SaveChangesAsync();
+        //}
+        //public bool Exists(GuidValueObject DomainEntityGuid)
+        //{
+        //    return _ConsuMedicDBContex.Company.Any(x => x.CompanyGuid.Equals(DomainEntityGuid));
+        //}
+        //public async Task<bool> ExistsAsync(GuidValueObject DomainEntityGuid)
+        //{
+        //    return await _ConsuMedicDBContex.Company.AnyAsync(x => x.CompanyGuid.Equals(DomainEntityGuid));
+        //}
+        //public Company Read(GuidValueObject DomainEntityGuid)
+        //{
+        //    return _ConsuMedicDBContex.Company.SingleOrDefault(x => x.CompanyGuid.Equals(DomainEntityGuid));
+        //}
+        //public List<Company> ReadAll(GuidValueObject CompanyGuid)
+        //{
+        //    return _ConsuMedicDBContex.Company.ToList();
+        //}
+        //public async Task<List<Company>> ReadAllAsync(GuidValueObject CompanyGuid)
+        //{
+        //    return await _ConsuMedicDBContex.Company.ToListAsync();
+        //}
+        //public async Task<Company> ReadAsync(GuidValueObject DomainEntityGuid)
+        //{
+        //    return await _ConsuMedicDBContex.Company.SingleOrDefaultAsync(x => x.CompanyGuid.Equals(DomainEntityGuid));
+        //}
     }
 }

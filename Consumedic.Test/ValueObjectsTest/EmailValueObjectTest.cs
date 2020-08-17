@@ -6,18 +6,29 @@ using System.Text;
 namespace Consumedic.Test.ValueObjectsTest
 {
     [TestClass]
-    class EmailValueObjectTest
+    public class EmailValueObjectTest
     {
         [TestMethod]
         public void EmailCorrectFormat()
         {
-            Email email = new Email("cespejo25@gmail.com");
-            //Assert.AreEqual(email)
+            string Email = "cespejo25@gmail.com";
+            Email email = new Email(Email);
+            Assert.IsTrue(email.Value.Equals(Email));
         }
         [TestMethod]
+        [ExpectedException(typeof(FormatException))]
         public void EmailIncorrectFomat()
         {
-            Email email = new Email("cespejo25gmail.com");
+            string Email = "cespejo25gmail.com";
+            Email email = new Email(Email);
+            Assert.IsTrue(email.Value.Equals(Email));
+        }
+        [TestMethod]
+        public void EmailIncorrectNullFomat()
+        {
+            string Email = null;
+            Email email = new Email(Email);
+            Assert.IsTrue(email.Value == Email);
         }
     }
 }

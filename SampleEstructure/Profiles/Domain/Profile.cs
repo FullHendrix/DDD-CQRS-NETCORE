@@ -4,7 +4,6 @@ namespace SampleEstructure.Profiles.Domain
 {
     public class Profile : DomainModel
     {
-        //Propiedades en español, por consistencia con BD 
         public GuidValueObject ProfileGuid { get; set; }
         public StringValueObject ProfileName { get; set; }
         public bool IsPacient { get; set; }

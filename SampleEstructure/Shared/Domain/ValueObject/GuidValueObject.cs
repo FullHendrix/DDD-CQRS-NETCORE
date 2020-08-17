@@ -1,12 +1,9 @@
-﻿using SampleEstructure.Companies.Domain;
-using SampleEstructure.Repository;
-using System;
+﻿using System;
 namespace SampleEstructure.Shared.Domain.ValueObject
 {
     public class GuidValueObject
     {
         public Guid Value { get; private set; }
-        GeneralRepository<Company> _CompanyRepository;
         public GuidValueObject(string value)
         {
             Guid guidValue = isValidaGuid(value);

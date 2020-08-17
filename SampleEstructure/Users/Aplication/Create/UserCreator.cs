@@ -21,7 +21,7 @@ namespace SampleEstructure.Users.Aplication.Create
             if (!_CompannyRepository.Exists(CompanyGuid)) throw new Exception("Company don't exists");
         }
         #endregion
-        public void Create(GuidValueObject UserGuid, StringValueObject Names, StringValueObject LastNames, Email Email, GuidValueObject ProfileGuid, Password Password, bool IsPacient, GuidValueObject ComnpanyGuid, StringValueObject UserCreator)
+        public void Create(GuidValueObject UserGuid, StringValueObject Names, StringValueObject LastNames, Email Email, GuidValueObject ProfileGuid, Password Password, bool IsPacient, GuidValueObject ComnpanyGuid, Email UserCreator)
         {
             ValidateCreateUser(UserGuid, ComnpanyGuid);
             User user = User.Create(UserGuid, Names, LastNames, Email, ProfileGuid, Password, IsPacient, ComnpanyGuid, UserCreator);

@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 namespace Consumedic.Test.MockRepository
 {
-    public class CompanyFakeRepository : GeneralRepository<Company>
+    class CompanyFakeRepository : GeneralRepository<Company>
     {
         public void Create(Company DomainEntity)
         {

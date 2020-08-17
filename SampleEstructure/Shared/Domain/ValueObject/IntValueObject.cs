@@ -1,8 +1,8 @@
 ﻿namespace SampleEstructure.Shared.Domain.ValueObject
 {
-    class IntValueObject
+    public class IntValueObject
     {
-        public int Value { get;  }
+        public int Value { get; private set; }
         public IntValueObject(int value)
         {
             Value = value;

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "KwAaAvwQ4qoNk3XiUaGlzl8BpMaqElYnXH8M7oz50VIKpljUmFSwLq/szDVqiFl8zqhoiMmJUc4alkSG3WLCQA==",
+  "dgSpecHash": "t1+1Krvmzz6h4X3QyUNxPXvFMQRoi0tnzIlytaK5LahzlysvBtr9Dnr5dnas7SixiUsNSbo4a3hGkvpkPmnw7A==",
   "success": true,
   "projectFilePath": "D:\\Desarrollo\\CLean\\DDD-CQRS-NETCORE\\SampleEstructure\\SampleEstructure.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.entityframeworkcore\\3.1.6\\microsoft.entityframeworkcore.3.1.6.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\3.1.6\\microsoft.entityframeworkcore.abstractions.3.1.6.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\3.1.6\\microsoft.entityframeworkcore.analyzers.3.1.6.nupkg.sha512",
+    "C:\\Users\\pc\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\3.1.6\\microsoft.entityframeworkcore.relational.3.1.6.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\3.1.6\\microsoft.extensions.caching.abstractions.3.1.6.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.extensions.caching.memory\\3.1.6\\microsoft.extensions.caching.memory.3.1.6.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.6\\microsoft.extensions.configuration.3.1.6.nupkg.sha512",

@@ -10,9 +10,9 @@ namespace SampleEstructure.Companies.Aplication.Find
         {
             _Repository = Repository;
         }
-        public Company Find(GuidValueObject CompanyGuid )
-        {
-            return _Repository.Read(CompanyGuid);
-        }
+        //public Company Find(GuidValueObject CompanyGuid )
+        //{
+        //    return _Repository.Read(CompanyGuid);
+        //}
     }
 }

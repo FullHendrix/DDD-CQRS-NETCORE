@@ -4,16 +4,19 @@ namespace SampleEstructure.Shared.Domain.ValueObject
 {
     public class Email
     {
-        public string Value { get; }
+        public string Value { get; private set; }
         public Email(string value)
         {
-            IsValidEmai(value);
+            if (value != null)
+            {
+                IsValidEmai(value);
+            }
             Value = value;
         }
         #region Guard
         void IsValidEmai(string value)
         {
-            string pattern = @"/[a - zA - Z0 - 9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?/";
+            string pattern = @"[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?";
             Match emailMatch = Regex.Match(value, pattern);
             if (!emailMatch.Success)
             {

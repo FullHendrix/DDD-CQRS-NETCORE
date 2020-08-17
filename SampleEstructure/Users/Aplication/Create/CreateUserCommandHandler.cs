@@ -20,7 +20,7 @@ namespace SampleEstructure.Users.Aplication.Create
             Password Password = new Password(Command.Password) ;
             bool IsPacient = Command.IsPacient;
             GuidValueObject CompanyGuid = new GuidValueObject(Command.CompanyGuid);
-            StringValueObject UserCreator = new StringValueObject(Command.CurrentUser);
+            Email UserCreator = new Email(Command.CurrentUser);
             _userCreator.Create(UserGuid, Names ,LastNames,Email, ProfileGuid, Password ,IsPacient, CompanyGuid, UserCreator);
         }
     }

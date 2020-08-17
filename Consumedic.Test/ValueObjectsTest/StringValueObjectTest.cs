@@ -1,28 +1,46 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SampleEstructure.Shared.Domain.ValueObject;
 using System;
-using System.Collections.Generic;
-using System.Text;
 namespace Consumedic.Test.ValueObjectsTest
 {
     [TestClass]
-    class StringValueObjectTest
+    public class StringValueObjectTest
     {
         [TestMethod]
-        public void StringCorrectFormat()
+        public void StringNullCorrectFormat()
         {
-            StringValueObject stringValueObject = new StringValueObject("");
+            StringValueObject stringValueObject = new StringValueObject(null);
+            Assert.IsTrue(stringValueObject.Value == null);
         }
         [TestMethod]
-        public void StringIncorrectFormatName()
+        public void StringCorrectFormatName()
         {
-            StringValueObject stringValueObject = new StringValueObject("Carlos Espejo Huerta");
+            string Value = "Carlos Espejo";
+            StringValueObject stringValueObject = new StringValueObject(Value);
+            Assert.IsTrue(stringValueObject.Value.Equals(Value));
         }
         [TestMethod]
         [ExpectedException(typeof(FormatException))]
-        public void StringIncorrectFormatAddres()
+        public void StringIncorrectFormatName()
         {
-            StringValueObject stringValueObject = new StringValueObject("Mz N Lt 12 Gr 27 Sc 3");
+            string Value = "Carlos Espejo 25";
+            StringValueObject stringValueObject = new StringValueObject(Value);
+            Assert.IsTrue(stringValueObject.Value.Equals(Value));
+        }
+        [TestMethod]
+        public void StringCorrectLongText()
+        {
+            string Value = "Lorem Ipsum";
+            StringValueObject stringValueObject = new StringValueObject(Value);
+            Assert.IsTrue(stringValueObject.Value.Equals(Value));
+        }
+        [TestMethod]
+        [ExpectedException(typeof(FormatException))]
+        public void StringIncorrectLongText()
+        {
+            string Value = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s";
+            StringValueObject stringValueObject = new StringValueObject(Value);
+            Assert.IsTrue(stringValueObject.Value.Equals(Value));
         }
     }
 }
