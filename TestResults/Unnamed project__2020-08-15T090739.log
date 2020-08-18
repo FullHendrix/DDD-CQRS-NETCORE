@@ -1,0 +1,43 @@
+﻿2020-08-15T09:07:39.1038592-05:00;VSTestExecutionThread;Info;SpecFlow+Runner execution started
+2020-08-15T09:07:39.1046805-05:00;VSTestExecutionThread;Info;SpecFlow+Runner 3.1.53 in Framework netcore31 in x64 mode execution started
+2020-08-15T09:07:39.1046842-05:00;VSTestExecutionThread;Info;TestAdapter Location: D:\Desarrollo\CLean\DDD-CQRS-NETCORE\Consumedic.Test\bin\Debug\netcoreapp3.1\TechTalk.SpecRun.VisualStudio.TestAdapter.dll
+2020-08-15T09:07:39.1361729-05:00;VSTestExecutionThread;Info;SpecRun: running tests in D:\Desarrollo\CLean\DDD-CQRS-NETCORE\Consumedic.Test\bin\Debug\netcoreapp3.1\Consumedic.Test.dll
+2020-08-15T09:07:39.1364594-05:00;VSTestExecutionThread;Info;Output folder configured to "D:\Desarrollo\CLean\DDD-CQRS-NETCORE\TestResults" (default)
+2020-08-15T09:07:39.1365725-05:00;VSTestExecutionThread;Info;Profile: 
+2020-08-15T09:07:39.1683687-05:00;VSTestExecutionThread;Info;Log file path: D:\Desarrollo\CLean\DDD-CQRS-NETCORE\TestResults\Unnamed project__2020-08-15T090739.log
+2020-08-15T09:07:39.1728082-05:00;VSTestExecutionThread;Info;SpecFlow+Runner Evaluation Mode: Please purchase at http://www.specflow.org/plus to remove test execution delay.
+2020-08-15T09:07:39.1778625-05:00;Thread#12;Info;Checking license
+2020-08-15T09:07:39.1914130-05:00;Thread#12;Info;Evaluation mode: test execution starts in 14 seconds... (this delay is removed in the registered version)
+2020-08-15T09:07:53.1924497-05:00;Thread#12;Info;Evaluation delay finished.
+2020-08-15T09:07:53.1997871-05:00;Thread#12;Info;License check completed
+2020-08-15T09:07:53.2003630-05:00;Thread#12;Info;starting test run
+2020-08-15T09:07:53.2078644-05:00;Thread#12;Info;Discovering target: Default
+2020-08-15T09:07:53.2080466-05:00;Thread#12;Info;Discovering tests from assembly: D:\Desarrollo\CLean\DDD-CQRS-NETCORE\Consumedic.Test\bin\Debug\netcoreapp3.1\Consumedic.Test.dll
+2020-08-15T09:07:53.2907344-05:00;Thread#12;Info;Discovered tests from assembly: D:\Desarrollo\CLean\DDD-CQRS-NETCORE\Consumedic.Test\bin\Debug\netcoreapp3.1\Consumedic.Test.dll
+2020-08-15T09:07:53.2919932-05:00:Test Suite Dump
+2020-08-15T09:07:53.2935281-05:00:#0: Unnamed project/ - 
+2020-08-15T09:07:53.2935828-05:00:End: Test Suite Dump
+2020-08-15T09:07:53.3106457-05:00:Thread#0:Scheduler: get next test for thread 0
+2020-08-15T09:07:53.3126838-05:00:Thread#:Scheduler: at the end of normal test queue
+2020-08-15T09:07:53.3127184-05:00:Thread#0:Scheduler: enumerator for thread is at end
+2020-08-15T09:07:53.3128556-05:00:Thread#0:Scheduler: No more tests for thread
+2020-08-15T09:07:53.3203134-05:00:Thread#-1:Scheduler: get next test for thread -1
+2020-08-15T09:07:53.3203397-05:00:Thread#:Scheduler: at the end of normal test queue
+2020-08-15T09:07:53.3203420-05:00:Thread#-1:Scheduler: enumerator for thread is at end
+2020-08-15T09:07:53.3223642-05:00;Thread#12;Info;test run finished
+2020-08-15T09:07:53.3224896-05:00;Thread#12;Info;publishing test results
+2020-08-15T09:07:53.3226470-05:00;Thread#12;Info;Not publishing results.
+2020-08-15T09:07:53.3227029-05:00;Thread#12;Info;test results published
+2020-08-15T09:07:53.3227742-05:00;Thread#12;Info;generating reports
+2020-08-15T09:07:53.4080164-05:00;Thread#12;Info;Starting external report generation process
+2020-08-15T09:07:54.6439822-05:00;Thread#12;Error;Could not generate test run result reports. An error occurred in the generator.
+2020-08-15T09:07:54.6444333-05:00;Thread#12;Error;External program returned exit code '-2'
+2020-08-15T09:07:54.6445702-05:00;Thread#12;Info;Failed generating reports
+2020-08-15T09:07:54.6499803-05:00:Total: 0
+2020-08-15T09:07:54.6517324-05:00:Succeeded: 0
+2020-08-15T09:07:54.6520421-05:00:Ignored: 0
+2020-08-15T09:07:54.6523130-05:00:Pending: 0
+2020-08-15T09:07:54.6532784-05:00:Skipped: 0
+2020-08-15T09:07:54.6536595-05:00:Failed: 0
+2020-08-15T09:07:54.6587090-05:00;VSTestExecutionThread;Info;Adding attachments to VSTest
+========== End of log file ==========
