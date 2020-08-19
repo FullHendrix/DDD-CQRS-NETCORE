@@ -1,0 +1,19 @@
+﻿** Aspectos destacados
+     Tablas que se volverán a compilar
+       Ninguno
+     Índices clúster que se van a quitar
+       Ninguno
+     Índices clúster que se van a crear
+       Ninguno
+     Posibles incidencias de datos
+       Ninguno
+
+** Acciones del usuario
+     Crear
+       [dbo].[MedicalCenter] (Tabla)
+       [dbo].[MedicalCenterSpecialist] (Tabla)
+       [dbo].[MedicalCenterSpeciality] (Tabla)
+       [dbo].[FK_MedicalCenterSpecialist_MedicalCenter] (Clave externa)
+       [dbo].[FK_MedicalCenterSpeciality_MedicalCenter] (Clave externa)
+
+** Acciones de compatibilidad

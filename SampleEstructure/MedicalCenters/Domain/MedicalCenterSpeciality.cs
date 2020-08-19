@@ -20,7 +20,7 @@ namespace SampleEstructure.MedicalCenters.Domain
             this.ModificationDate = ModificationDate;
             this.ModificationUser = ModificationUser;
         }
-        public MedicalCenterSpeciality Create(GuidValueObject MedicalCenterSpecialityGuid, GuidValueObject MedicalCenterGuid, GuidValueObject SpecialityGuid,
+        public static MedicalCenterSpeciality Create(GuidValueObject MedicalCenterSpecialityGuid, GuidValueObject MedicalCenterGuid, GuidValueObject SpecialityGuid,
         bool Active, DateTime? CreationDate, Email CreationUser, DateTime? ModificationDate, Email ModificationUser)
         {
             return new MedicalCenterSpeciality(MedicalCenterSpecialityGuid,MedicalCenterGuid,SpecialityGuid,Active,CreationDate,CreationUser,ModificationDate,ModificationUser);

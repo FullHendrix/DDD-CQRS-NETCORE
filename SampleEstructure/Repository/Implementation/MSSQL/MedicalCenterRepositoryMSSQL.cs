@@ -17,6 +17,7 @@ namespace SampleEstructure.Repository.Implementation.MSSQL
         public void Create(MedicalCenter DomainEntity)
         {
             _ConsuMedicDBContex.MedicalCenter.Add(DomainEntity);
+            var a = _ConsuMedicDBContex.MedicalCenterSpecialist.SingleOrDefault(x => x.MedicalCenterSpecialistGuid.Equals(new GuidValueObject("8F2902DD-7D89-4559-88D5-3207749D51F2")));
             _ConsuMedicDBContex.SaveChanges();
         }
 
@@ -37,39 +38,37 @@ namespace SampleEstructure.Repository.Implementation.MSSQL
         public MedicalCenter Read(GuidValueObject DomainEntityGuid)
         {
             var medicalCenter =  _ConsuMedicDBContex.MedicalCenter.SingleOrDefault(x => x.MedicalCenterGuid.Equals(DomainEntityGuid));
-
-            List<MedicalCenterSpecialist> c = new List<MedicalCenterSpecialist>();
-                c = _ConsuMedicDBContex.MedicalCenterSpecialist.Where(x => x.MedicalCenterGuid.Equals(DomainEntityGuid)).ToList();
-
-            medicalCenter.SetmedicalCenterSpecialists(_ConsuMedicDBContex.MedicalCenterSpecialist.Where(x => x.MedicalCenterGuid.Equals(DomainEntityGuid)).ToList());
-            medicalCenter.SetmedicalCenterSpecialities(_ConsuMedicDBContex.MedicalCenterSpeciality.Where(x => x.MedicalCenterGuid.Equals(DomainEntityGuid)).ToList());
+            //List<MedicalCenterSpecialist> c = new List<MedicalCenterSpecialist>();
+            //c = _ConsuMedicDBContex.MedicalCenterSpecialist.Where(x => x.MedicalCenterGuid.Equals(DomainEntityGuid)).ToList();
+            //medicalCenter.SetmedicalCenterSpecialists(_ConsuMedicDBContex.MedicalCenterSpecialist.Where(x => x.MedicalCenterGuid.Equals(DomainEntityGuid)).ToList());
+            //medicalCenter.SetmedicalCenterSpecialities(_ConsuMedicDBContex.MedicalCenterSpeciality.Where(x => x.MedicalCenterGuid.Equals(DomainEntityGuid)).ToList());
             return medicalCenter;
         }
         public List<MedicalCenter> ReadAll(GuidValueObject CompanyGuid)
         {
             var medicalCenters = _ConsuMedicDBContex.MedicalCenter.Where(x => x.CompanyGuid.Equals(CompanyGuid)).ToList();
-            foreach(MedicalCenter medicalCenter in medicalCenters)
-            {
-                medicalCenter.SetmedicalCenterSpecialists(_ConsuMedicDBContex.MedicalCenterSpecialist.Where(x => x.MedicalCenterGuid.Equals(medicalCenter.MedicalCenterGuid)).ToList());
-                medicalCenter.SetmedicalCenterSpecialities(_ConsuMedicDBContex.MedicalCenterSpeciality.Where(x => x.MedicalCenterGuid.Equals(medicalCenter.MedicalCenterGuid)).ToList());
-            }
+            //foreach(MedicalCenter medicalCenter in medicalCenters)
+            //{
+            //    medicalCenter.SetmedicalCenterSpecialists(_ConsuMedicDBContex.MedicalCenterSpecialist.Where(x => x.MedicalCenterGuid.Equals(medicalCenter.MedicalCenterGuid)).ToList());
+            //    medicalCenter.SetmedicalCenterSpecialities(_ConsuMedicDBContex.MedicalCenterSpeciality.Where(x => x.MedicalCenterGuid.Equals(medicalCenter.MedicalCenterGuid)).ToList());
+            //}
             return medicalCenters;
         }
         public async Task<List<MedicalCenter>> ReadAllAsync(GuidValueObject CompanyGuid)
         {
             var medicalCenters = _ConsuMedicDBContex.MedicalCenter.Where(x => x.CompanyGuid.Equals(CompanyGuid)).ToList();
-            foreach (MedicalCenter medicalCenter in medicalCenters)
-            {
-                medicalCenter.SetmedicalCenterSpecialists(await _ConsuMedicDBContex.MedicalCenterSpecialist.Where(x => x.MedicalCenterGuid.Equals(medicalCenter.MedicalCenterGuid)).ToListAsync());
-                medicalCenter.SetmedicalCenterSpecialities(await _ConsuMedicDBContex.MedicalCenterSpeciality.Where(x => x.MedicalCenterGuid.Equals(medicalCenter.MedicalCenterGuid)).ToListAsync());
-            }
+            //foreach (MedicalCenter medicalCenter in medicalCenters)
+            //{
+            //    medicalCenter.SetmedicalCenterSpecialists(await _ConsuMedicDBContex.MedicalCenterSpecialist.Where(x => x.MedicalCenterGuid.Equals(medicalCenter.MedicalCenterGuid)).ToListAsync());
+            //    medicalCenter.SetmedicalCenterSpecialities(await _ConsuMedicDBContex.MedicalCenterSpeciality.Where(x => x.MedicalCenterGuid.Equals(medicalCenter.MedicalCenterGuid)).ToListAsync());
+            //}
             return medicalCenters;
         }
         public async Task<MedicalCenter> ReadAsync(GuidValueObject DomainEntityGuid)
         {
             var medicalCenter = _ConsuMedicDBContex.MedicalCenter.SingleOrDefault(x => x.MedicalCenterGuid.Equals(DomainEntityGuid));
-            medicalCenter.SetmedicalCenterSpecialists(await _ConsuMedicDBContex.MedicalCenterSpecialist.Where(x => x.MedicalCenterGuid.Equals(DomainEntityGuid)).ToListAsync());
-            medicalCenter.SetmedicalCenterSpecialities(await _ConsuMedicDBContex.MedicalCenterSpeciality.Where(x => x.MedicalCenterGuid.Equals(DomainEntityGuid)).ToListAsync());
+            //medicalCenter.SetmedicalCenterSpecialists(await _ConsuMedicDBContex.MedicalCenterSpecialist.Where(x => x.MedicalCenterGuid.Equals(DomainEntityGuid)).ToListAsync());
+            //medicalCenter.SetmedicalCenterSpecialities(await _ConsuMedicDBContex.MedicalCenterSpeciality.Where(x => x.MedicalCenterGuid.Equals(DomainEntityGuid)).ToListAsync());
             return medicalCenter;
         }
         public void AddSpecialist(MedicalCenterSpecialist medicalCenterSpecialist)

@@ -1,0 +1,6 @@
+D:\Desarrollo\CLean\DDD-CQRS-NETCORE\Consumedic.BD\bin\Debug\Consumedic.BD.dacpac
+D:\Desarrollo\CLean\DDD-CQRS-NETCORE\Consumedic.BD\obj\Debug\Consumedic.BD.sqlprojAssemblyReference.cache
+D:\Desarrollo\CLean\DDD-CQRS-NETCORE\Consumedic.BD\obj\Debug\Consumedic.BD.dll
+D:\Desarrollo\CLean\DDD-CQRS-NETCORE\Consumedic.BD\obj\Debug\Consumedic.BD.pdb
+D:\Desarrollo\CLean\DDD-CQRS-NETCORE\Consumedic.BD\bin\Debug\Consumedic.BD.dll
+D:\Desarrollo\CLean\DDD-CQRS-NETCORE\Consumedic.BD\bin\Debug\Consumedic.BD.pdb

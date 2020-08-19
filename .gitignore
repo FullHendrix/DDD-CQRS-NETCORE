@@ -1,4 +1,14 @@
 .vs
 ConsoleTest/bin
-SampleEstructure/bin
+ConsoleTest/obj
+Consumedic.Test\bin
+Consumedic.Test\obj
+ConsumedicBDD.Test\bin
+ConsumedicBDD.Test\obj
+ConsumedicTest\bin
+ConsumedicTest\obj
 Repository/bin
+Repository/obj
+SampleEstructure/bin
+SampleEstructure/obj
+TestResults

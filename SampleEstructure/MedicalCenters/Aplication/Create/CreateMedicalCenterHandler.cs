@@ -20,7 +20,7 @@ namespace SampleEstructure.MedicalCenters.Aplication.Create
             GuidValueObject CompanyGuid = new GuidValueObject(createMedicalCenterCommand.CompanyGuid);
             Email CreationUser = new Email(createMedicalCenterCommand.CreationUser);
             MedicalCenterCreator medicalCenterCreator = new MedicalCenterCreator(_medicalCenterRepository);
-            medicalCenterCreator.Create(MedicalCenterGuid, MedicalCenterName, UbigeoId, Address, RepresentativeName, CompanyGuid, CreationUser);
+            medicalCenterCreator.Create(MedicalCenterGuid, MedicalCenterName, UbigeoId, Address, RepresentativeName, CompanyGuid);
         }
     }
 }

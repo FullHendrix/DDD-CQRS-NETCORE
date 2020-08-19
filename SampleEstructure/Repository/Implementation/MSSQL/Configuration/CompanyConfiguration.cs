@@ -19,6 +19,7 @@ namespace SampleEstructure.Repository.Implementation.MSSQL.Configuration
             builder.Property(x => x.CreationUser).HasConversion(v => v.Value, v => new Email(v)).HasColumnName(nameof(Company.CreationUser));
             builder.Property(x => x.ModificationDate).HasColumnName(nameof(Company.ModificationDate));
             builder.Property(x => x.ModificationUser).HasConversion(v => v.Value, v => new Email(v)).HasColumnName(nameof(Company.ModificationUser));
+
         }
     }
 }

@@ -5,16 +5,15 @@ namespace SampleEstructure.MedicalCenters.Aplication.Create
 {
     class MedicalCenterCreator
     {
-        MedicalCenterRepository _GeneralRepository;
-        public MedicalCenterCreator(MedicalCenterRepository GeneralRepository)
+        MedicalCenterRepository _medicalCenterRepository;
+        public MedicalCenterCreator(MedicalCenterRepository medicalCenterRepository)
         {
-            _GeneralRepository = GeneralRepository;
+            _medicalCenterRepository = medicalCenterRepository;
         }
-        public void Create(GuidValueObject MedicalCenterGuid,StringValueObject MedicalCenterName, IntValueObject UbigeoId, AlphanumericValueObject Address, StringValueObject RepresentativeName, GuidValueObject CompanyGuid, Email CreationUser)
+        public void Create(GuidValueObject MedicalCenterGuid,StringValueObject MedicalCenterName, IntValueObject UbigeoId, AlphanumericValueObject Address, StringValueObject RepresentativeName, GuidValueObject CompanyGuid)
         {
-            MedicalCenter medicalCenter = MedicalCenter.Create(MedicalCenterGuid,MedicalCenterName,UbigeoId,Address,RepresentativeName,CompanyGuid,CreationUser);
-            _GeneralRepository.Create(medicalCenter);
-            MedicalCenter m = _GeneralRepository.Read(MedicalCenterGuid);
+            MedicalCenter medicalCenter = MedicalCenter.Create(MedicalCenterGuid,MedicalCenterName,UbigeoId,Address,RepresentativeName,CompanyGuid,true);
+            _medicalCenterRepository.Create(medicalCenter);
         }
     }
 }
