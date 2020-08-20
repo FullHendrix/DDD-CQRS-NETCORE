@@ -1,7 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.ValueGeneration;
 using SampleEstructure.MedicalCenters.Domain;
+using SampleEstructure.Shared.Domain;
 using SampleEstructure.Shared.Domain.ValueObject;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,11 +17,33 @@ namespace SampleEstructure.Repository.Implementation.MSSQL
         }
         public void Create(MedicalCenter DomainEntity)
         {
-            _ConsuMedicDBContex.MedicalCenter.Add(DomainEntity);
-            var a = _ConsuMedicDBContex.MedicalCenterSpecialist.SingleOrDefault(x => x.MedicalCenterSpecialistGuid.Equals(new GuidValueObject("8F2902DD-7D89-4559-88D5-3207749D51F2")));
+            ////Blog----
+            //var blog = Blog.Create(3, "asdasd");
+            //blog.AddPost(7, "Intro to C#");
+            //blog.AddPost(8, "Intro to VB.NET
+            //);
+            //blog.AddPost(9, "Intro to F#");1            //_ConsuMedicDBContex.Blogs.Add(blog)            //_ConsuMedicDBContex.SaveChanges();
+            ////Listar Blog
+            //var rblog = _ConsuMedicDBContex.Blogs.Include("Posts").FirstOrDefault(x => x.IdBlog == blog.IdBlog);
+            //var d = rblog.Posts;
+            //MedicalCenterSlim----
+            var MCS = MedicalCenterSlim.Create(Guid.NewGuid(), "Prueba", 1, "Calle", "Uno", Guid.NewGuid());
+            MCS.AddMedicalCenterSpecialists(Guid.NewGuid(), Guid.NewGuid());
+            _ConsuMedicDBContex.MedicalCenterS.Add(MCS);
             _ConsuMedicDBContex.SaveChanges();
-        }
 
+            var MCSR = _ConsuMedicDBContex.MedicalCenterS.Include("MedicalCenterSpecialists").FirstOrDefault(x => x.MedicalCenterGuid.Equals(MCS.MedicalCenterGuid));
+            var mcsrl = MCSR.MedicalCenterSpecialists;
+            //MedicalCenter----
+            GuidValueObject MedicalCenterSpecialistGuid = new GuidValueObject(Guid.NewGuid().ToString());
+            GuidValueObject SpecialistGuid = new GuidValueObject(Guid.NewGuid().ToString());
+            DomainEntity.AddSpecialist(MedicalCenterSpecialistGuid, SpecialistGuid);
+            _ConsuMedicDBContex.MedicalCenter.Add(DomainEntity);
+            _ConsuMedicDBContex.SaveChanges();
+            //var rmedicalcenter = _ConsuMedicDBContex.MedicalCenter.Include(b => b.MedicalCenterSpecialists).FirstOrDefault(x => x.MedicalCenterGuid.Equals(DomainEntity.MedicalCenterGuid));
+            var rmedicalcenter = _ConsuMedicDBContex.MedicalCenter.Include(b => b.MedicalCenterSpecialists).First();
+            var rmedicalcenterspecialist = rmedicalcenter.MedicalCenterSpecialists;
+        }
         public async Task CreateAsync(MedicalCenter DomainEntity)
         {
             _ConsuMedicDBContex.MedicalCenter.Add(DomainEntity);
@@ -37,7 +60,9 @@ namespace SampleEstructure.Repository.Implementation.MSSQL
         }
         public MedicalCenter Read(GuidValueObject DomainEntityGuid)
         {
-            var medicalCenter =  _ConsuMedicDBContex.MedicalCenter.SingleOrDefault(x => x.MedicalCenterGuid.Equals(DomainEntityGuid));
+            var medicalCenter = _ConsuMedicDBContex.MedicalCenter.SingleOrDefault(x => x.MedicalCenterGuid.Equals(DomainEntityGuid));
+            var a = medicalCenter.MedicalCenterSpecialists;
+            var medicalCenter2 = _ConsuMedicDBContex.MedicalCenter.Include("MedicalCenterSpecialist").SingleOrDefault(x => x.MedicalCenterGuid.Equals(DomainEntityGuid));
             //List<MedicalCenterSpecialist> c = new List<MedicalCenterSpecialist>();
             //c = _ConsuMedicDBContex.MedicalCenterSpecialist.Where(x => x.MedicalCenterGuid.Equals(DomainEntityGuid)).ToList();
             //medicalCenter.SetmedicalCenterSpecialists(_ConsuMedicDBContex.MedicalCenterSpecialist.Where(x => x.MedicalCenterGuid.Equals(DomainEntityGuid)).ToList());

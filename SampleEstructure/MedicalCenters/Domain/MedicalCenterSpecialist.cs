@@ -7,7 +7,7 @@ namespace SampleEstructure.MedicalCenters.Domain
         public GuidValueObject SpecialistGuid { get; private set; }
         public GuidValueObject MedicalCenterGuid { get; private set; }
         public bool Active { get; private set; }
-        public virtual MedicalCenter MedicalCenterNavigation { get; private set; }
+        public MedicalCenter MedicalCenter { get; private set; }
         private MedicalCenterSpecialist(GuidValueObject MedicalCenterSpecialistGuid, GuidValueObject SpecialistGuid, GuidValueObject MedicalCenterGuid,bool Active)
         {
             this.MedicalCenterSpecialistGuid = MedicalCenterSpecialistGuid;
@@ -17,8 +17,7 @@ namespace SampleEstructure.MedicalCenters.Domain
         }
         public static MedicalCenterSpecialist Create(GuidValueObject MedicalCenterSpecialistGuid, GuidValueObject SpecialistGuid, GuidValueObject MedicalCenterGuid,bool Active)
         {
-            MedicalCenterSpecialist medicalCenterSpecialist = new MedicalCenterSpecialist(MedicalCenterSpecialistGuid, SpecialistGuid, MedicalCenterGuid, Active);
-            return medicalCenterSpecialist;
+            return new MedicalCenterSpecialist(MedicalCenterSpecialistGuid, SpecialistGuid, MedicalCenterGuid, Active);
         }
     }
 }

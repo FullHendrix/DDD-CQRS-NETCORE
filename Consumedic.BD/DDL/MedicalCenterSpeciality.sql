@@ -4,5 +4,5 @@
     SpecialityGuid UNIQUEIDENTIFIER,
     MedicalCenterGuid UNIQUEIDENTIFIER,
 	Active BIT, 
-    CONSTRAINT [FK_MedicalCenterSpeciality_MedicalCenter] FOREIGN KEY (MedicalCenterGuid) REFERENCES MedicalCenter(MedicalCenterGuid)
+    CONSTRAINT [FK_MedicalCenterSpeciality_MedicalCenter] FOREIGN KEY (MedicalCenterGuid) REFERENCES MedicalCenters(MedicalCenterGuid)
 )

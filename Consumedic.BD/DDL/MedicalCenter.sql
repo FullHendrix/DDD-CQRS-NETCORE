@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[MedicalCenter]
+﻿CREATE TABLE [dbo].[MedicalCenters]
 (
 	MedicalCenterGuid UNIQUEIDENTIFIER PRIMARY KEY,
 	MedicalCenterName VARCHAR(100),

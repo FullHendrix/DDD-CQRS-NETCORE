@@ -35,13 +35,13 @@ namespace Consumedic.Test.MedicalCenters
             CreateMedicalCenterHandler createMedicalCenterHandler = new CreateMedicalCenterHandler(this.MedicalCenterRepository);
             createMedicalCenterHandler.Handle(createMedicalCenterCommand);
 
-            AddMedicalCenterSpecialistCommand addMedicalCenterSpecialistCommand = AddMedicalCenterSpecialistCommand.Create(Guid.NewGuid().ToString(), Guid.NewGuid().ToString(), this.CentrealMedicalGuid);
-            AddMedicalCenterSpecialistHandler addMedicalCenterSpecialistHandler = new AddMedicalCenterSpecialistHandler(this.MedicalCenterRepository);
-            addMedicalCenterSpecialistHandler.Handle(addMedicalCenterSpecialistCommand);
+            //AddMedicalCenterSpecialistCommand addMedicalCenterSpecialistCommand = AddMedicalCenterSpecialistCommand.Create(Guid.NewGuid().ToString(), Guid.NewGuid().ToString(), this.CentrealMedicalGuid);
+            //AddMedicalCenterSpecialistHandler addMedicalCenterSpecialistHandler = new AddMedicalCenterSpecialistHandler(this.MedicalCenterRepository);
+            //addMedicalCenterSpecialistHandler.Handle(addMedicalCenterSpecialistCommand);
 
-            ReadMedicalCenterQuery readMedicalCenterQuery = ReadMedicalCenterQuery.Create(this.CentrealMedicalGuid);
-            ReadMedicalCenterHandler readMedicalCenterHandler = new ReadMedicalCenterHandler(this.MedicalCenterRepository);
-            readMedicalCenterHandler.Handle(readMedicalCenterQuery);
+            //ReadMedicalCenterQuery readMedicalCenterQuery = ReadMedicalCenterQuery.Create(this.CentrealMedicalGuid);
+            //ReadMedicalCenterHandler readMedicalCenterHandler = new ReadMedicalCenterHandler(this.MedicalCenterRepository);
+            //readMedicalCenterHandler.Handle(readMedicalCenterQuery);
         }
         //[TestMethod]
         //public void BAddMedicalCenterSpecialistCorrect()

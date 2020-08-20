@@ -62,5 +62,10 @@
     <Build Include="DDL\MedicalCenter.sql" />
     <Build Include="DDL\MedicalCenterSpecialist.sql" />
     <Build Include="DDL\MedicalCenterSpeciality.sql" />
+    <Build Include="DDL\Blog.sql" />
+    <Build Include="DDL\Post.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="Consumedic.BD.refactorlog" />
   </ItemGroup>
 </Project>
