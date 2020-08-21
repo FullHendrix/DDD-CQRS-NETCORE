@@ -15,8 +15,8 @@ namespace SampleEstructure.Repository.Implementation.MSSQL
         //public DbSet<MedicalCenterSpeciality> MedicalCenterSpeciality { get; set; }
         public DbSet<Post> Posts { get; set; }
         public DbSet<Blog> Blogs { get; set; }
-        public DbSet<MedicalCenterSlim> MedicalCenterSpecialistS { get; set; }
-        public DbSet<MedicalCenterSlim> MedicalCenterS { get; set; }
+        public DbSet<MedicalCenterSlim> MedicalCenterSpecialists { get; set; }
+        public DbSet<MedicalCenterSlim> MedicalCenters { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

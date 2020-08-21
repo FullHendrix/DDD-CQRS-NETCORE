@@ -8,3 +8,13 @@ D:\Desarrollo\CLean\DDD-CQRS-NETCORE\Consumedic.BD\obj\Debug\Model.xml
 D:\Desarrollo\CLean\DDD-CQRS-NETCORE\Consumedic.BD\obj\Debug\refactor.xml
 D:\Desarrollo\CLean\DDD-CQRS-NETCORE\Consumedic.BD\obj\Debug\postdeploy.sql
 D:\Desarrollo\CLean\DDD-CQRS-NETCORE\Consumedic.BD\obj\Debug\predeploy.sql
+D:\Cespejo\DDD-CQRS-NETCORE\Consumedic.BD\bin\Debug\Consumedic.BD.dacpac
+D:\Cespejo\DDD-CQRS-NETCORE\Consumedic.BD\bin\Debug\Consumedic.BD.dll
+D:\Cespejo\DDD-CQRS-NETCORE\Consumedic.BD\bin\Debug\Consumedic.BD.pdb
+D:\Cespejo\DDD-CQRS-NETCORE\Consumedic.BD\obj\Debug\Consumedic.BD.sqlprojAssemblyReference.cache
+D:\Cespejo\DDD-CQRS-NETCORE\Consumedic.BD\obj\Debug\Model.xml
+D:\Cespejo\DDD-CQRS-NETCORE\Consumedic.BD\obj\Debug\refactor.xml
+D:\Cespejo\DDD-CQRS-NETCORE\Consumedic.BD\obj\Debug\postdeploy.sql
+D:\Cespejo\DDD-CQRS-NETCORE\Consumedic.BD\obj\Debug\predeploy.sql
+D:\Cespejo\DDD-CQRS-NETCORE\Consumedic.BD\obj\Debug\Consumedic.BD.dll
+D:\Cespejo\DDD-CQRS-NETCORE\Consumedic.BD\obj\Debug\Consumedic.BD.pdb

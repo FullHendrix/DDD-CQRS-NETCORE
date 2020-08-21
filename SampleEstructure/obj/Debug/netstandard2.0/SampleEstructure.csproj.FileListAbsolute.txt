@@ -16,3 +16,12 @@ D:\Desarrollo\CLean\DDD-CQRS-NETCORE\SampleEstructure\obj\Debug\netstandard2.0\S
 D:\Desarrollo\CLean\DDD-CQRS-NETCORE\SampleEstructure\obj\Debug\netstandard2.0\SampleEstructure.dll
 D:\Desarrollo\CLean\DDD-CQRS-NETCORE\SampleEstructure\obj\Debug\netstandard2.0\SampleEstructure.pdb
 D:\Desarrollo\CLean\DDD-CQRS-NETCORE\SampleEstructure\obj\Debug\netstandard2.0\SampleEstructure.csprojAssemblyReference.cache
+D:\Cespejo\DDD-CQRS-NETCORE\SampleEstructure\bin\Debug\netstandard2.0\SampleEstructure.deps.json
+D:\Cespejo\DDD-CQRS-NETCORE\SampleEstructure\bin\Debug\netstandard2.0\SampleEstructure.dll
+D:\Cespejo\DDD-CQRS-NETCORE\SampleEstructure\bin\Debug\netstandard2.0\SampleEstructure.pdb
+D:\Cespejo\DDD-CQRS-NETCORE\SampleEstructure\obj\Debug\netstandard2.0\SampleEstructure.csprojAssemblyReference.cache
+D:\Cespejo\DDD-CQRS-NETCORE\SampleEstructure\obj\Debug\netstandard2.0\SampleEstructure.AssemblyInfoInputs.cache
+D:\Cespejo\DDD-CQRS-NETCORE\SampleEstructure\obj\Debug\netstandard2.0\SampleEstructure.AssemblyInfo.cs
+D:\Cespejo\DDD-CQRS-NETCORE\SampleEstructure\obj\Debug\netstandard2.0\SampleEstructure.csproj.CoreCompileInputs.cache
+D:\Cespejo\DDD-CQRS-NETCORE\SampleEstructure\obj\Debug\netstandard2.0\SampleEstructure.dll
+D:\Cespejo\DDD-CQRS-NETCORE\SampleEstructure\obj\Debug\netstandard2.0\SampleEstructure.pdb

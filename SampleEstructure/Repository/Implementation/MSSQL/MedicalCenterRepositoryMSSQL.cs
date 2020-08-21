@@ -27,22 +27,42 @@ namespace SampleEstructure.Repository.Implementation.MSSQL
             //var rblog = _ConsuMedicDBContex.Blogs.Include("Posts").FirstOrDefault(x => x.IdBlog == blog.IdBlog);
             //var d = rblog.Posts;
             //MedicalCenterSlim----
-            var MCS = MedicalCenterSlim.Create(Guid.NewGuid(), "Prueba", 1, "Calle", "Uno", Guid.NewGuid());
-            MCS.AddMedicalCenterSpecialists(Guid.NewGuid(), Guid.NewGuid());
-            _ConsuMedicDBContex.MedicalCenterS.Add(MCS);
+            GuidValueObject MedicalCenterGuid = new GuidValueObject(Guid.NewGuid().ToString());
+            StringValueObject MedicalCenterName = new StringValueObject("Prueba");
+            IntValueObject UbigeoId = new IntValueObject(1);
+            AlphanumericValueObject Address = new AlphanumericValueObject("mz n");
+            StringValueObject RepresentativeName = new StringValueObject("pepe");
+            GuidValueObject CompanyGuid = new GuidValueObject(Guid.NewGuid().ToString());
+
+            //Guid MedicalCenterGuid = Guid.NewGuid();
+            //string MedicalCenterName = "Prueba";
+            //int UbigeoId = 1;
+            //string Address = "mz n";
+            //string RepresentativeName = "pepe";
+            //Guid CompanyGuid = Guid.NewGuid();
+
+            //--
+            GuidValueObject A = new GuidValueObject(Guid.NewGuid().ToString());
+            GuidValueObject B = new GuidValueObject(Guid.NewGuid().ToString());
+            //Guid A = Guid.NewGuid();
+            //Guid B = Guid.NewGuid();
+
+
+            var MCS = MedicalCenterSlim.Create(MedicalCenterGuid, MedicalCenterName, UbigeoId,Address, RepresentativeName, CompanyGuid);
+            MCS.AddMedicalCenterSpecialists(A,B);
+            _ConsuMedicDBContex.MedicalCenters.Add(MCS);
             _ConsuMedicDBContex.SaveChanges();
 
-            var MCSR = _ConsuMedicDBContex.MedicalCenterS.Include("MedicalCenterSpecialists").FirstOrDefault(x => x.MedicalCenterGuid.Equals(MCS.MedicalCenterGuid));
+            //var MCSR = _ConsuMedicDBContex.MedicalCenterS.Include("MedicalCenterSpecialists").FirstOrDefault(x => x.MedicalCenterGuid.Equals(MCS.MedicalCenterGuid));
+            var MCSR = _ConsuMedicDBContex.MedicalCenters.Include("MedicalCenterSpecialists").FirstOrDefault(x => x.MedicalCenterGuid.Equals(MCS.MedicalCenterGuid));
             var mcsrl = MCSR.MedicalCenterSpecialists;
             //MedicalCenter----
-            GuidValueObject MedicalCenterSpecialistGuid = new GuidValueObject(Guid.NewGuid().ToString());
-            GuidValueObject SpecialistGuid = new GuidValueObject(Guid.NewGuid().ToString());
-            DomainEntity.AddSpecialist(MedicalCenterSpecialistGuid, SpecialistGuid);
-            _ConsuMedicDBContex.MedicalCenter.Add(DomainEntity);
-            _ConsuMedicDBContex.SaveChanges();
+            //GuidValueObject MedicalCenterSpecialistGuid = new GuidValueObject(Guid.NewGuid().ToString());
+            //GuidValueObject SpecialistGuid = new GuidValueObject(Guid.NewGuid().ToString());
+            //DomainEntity.AddSpecialist(MedicalCenterSpecialistGuid, SpecialistGuid);
+            //_ConsuMedicDBContex.MedicalCenter.Add(DomainEntity);
+            //_ConsuMedicDBContex.SaveChanges();
             //var rmedicalcenter = _ConsuMedicDBContex.MedicalCenter.Include(b => b.MedicalCenterSpecialists).FirstOrDefault(x => x.MedicalCenterGuid.Equals(DomainEntity.MedicalCenterGuid));
-            var rmedicalcenter = _ConsuMedicDBContex.MedicalCenter.Include(b => b.MedicalCenterSpecialists).First();
-            var rmedicalcenterspecialist = rmedicalcenter.MedicalCenterSpecialists;
         }
         public async Task CreateAsync(MedicalCenter DomainEntity)
         {
